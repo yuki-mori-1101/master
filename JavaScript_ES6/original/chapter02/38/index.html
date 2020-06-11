@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <!-- ここに、JavaScriptを記述します -->
+            <script>
+                /*
+                「^」->先頭 「\d」->decimal 「{?}」->桁数 「?」->直前の文字を0か1個
+                「$」->文末 「/~~~/g」->正規表現
+                ！！！メールアドレスは正規表現でチェックできない！！！
+                　->受信確認で代用。送信したメール内のURLクリックで本人認証する。
+            */
+                const zip_pattern = /^\d{3}-?\d{4}$/g;
+                let zip = '123-45678';
+
+                if(zip_pattern.test(zip) === true){
+                    document.write('正しく入力されました');
+                } else {
+                    document.write('郵便番号は xxx-xxxxの書式で入力してください');
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

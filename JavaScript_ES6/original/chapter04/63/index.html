@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <style>
+        /* p {
+            transition: opacity 1s;;
+        }
+        p:hover { 
+            opacity: 0;
+        } */
+        /* .v-enter-activeはhtmlに記載していないが、Vue.jsによって勝手に付加されている */
+        .v-enter-active {
+            /* opacityプロセスを3秒かけて変更する */
+            transition: opacity 3s;
+        }
+        /* 要素が表示される直前のクラス名 */
+        .v-enter {
+            opacity: 0;
+        }
+        /* 要素が表示される時のクラス名 */
+        .v-enter-to {
+            opacity: 1;
+        }
+        /*
+        .v-leave-active
+        .v-leave
+        .v-leave-to
+        */
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <h1 class="frame__title">JavaScript</h1>
+
+        <div class="frame__inner">
+            <!-- <p>マウスを乗せるとフェードアウトします</p> -->
+            <div id="app">
+                <transition appear>
+                    <div v-html="message"></div>
+                </transition>
+                
+            </div>
+            <!-- ここに、JavaScriptを記述します -->
+
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script>
+                let app = new Vue({
+                    el: "#app",
+                    data: {
+                        message: "Vue.jsを勉強しています"
+                    }
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
