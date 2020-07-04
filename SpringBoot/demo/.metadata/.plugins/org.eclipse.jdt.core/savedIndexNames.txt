@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/Users/y_mori/Git/master/SpringBoot/demo/.metadata/.plugins/org.eclipse.jdt.core

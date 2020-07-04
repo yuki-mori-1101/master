@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Bank","h":"","u":""}]
